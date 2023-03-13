@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 10px;
+}
+div, textarea{
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}

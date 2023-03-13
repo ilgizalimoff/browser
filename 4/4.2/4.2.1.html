@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./4.2.1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div">
+        текст
+    </div>
+
+    <script>
+        let div = document.getElementById('div')
+
+        div.addEventListener('click', function () {
+            let textarea = document.createElement('textarea')
+            textarea.value = div.innerHTML
+
+            textarea.onkeydown = function (event) {
+                if (event.key == 'Enter') {
+                    this.blur()
+                }
+            }
+
+            textarea.onblur = function () {
+                div.innerHTML = textarea.value
+                textarea.replaceWith(div)
+            }
+
+            div.replaceWith(textarea)
+            textarea.focus()
+        })
+
+    </script>
+</body>
+
+</html>

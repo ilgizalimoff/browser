@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let body = document.body
+        let ul = document.createElement('ul');
+        body.appendChild(ul);
+
+        while (true) {
+            let data = prompt("Введите пункт", "");
+
+            if (!data) {
+                break;
+            }
+
+            let li = document.createElement('li');
+            li.textContent = data;
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+
+</html>
